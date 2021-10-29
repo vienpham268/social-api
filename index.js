@@ -11,6 +11,8 @@ const userRoute = require("./routes/user");
 const authRoute = require("./routes/auth");
 const postRoute = require("./routes/post");
 const commentRoute = require("./routes/comment");
+const conversationRoute = require("./routes/conversation");
+const messageRoute = require("./routes/message");
 
 dotenv.config();
 
@@ -51,6 +53,8 @@ app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/comments", commentRoute);
+app.use("/api/conversation", conversationRoute);
+app.use("/api/message", messageRoute);
 app.listen(8800, () => {
   console.log("API server is running!");
 });
